@@ -17,6 +17,13 @@ implementation
 uses
   Sceneloader;
 
+type
+  creatures = record
+    x:      Double;
+    y:      Double;
+    speed:  Integer;
+  end;
+
 procedure initMain;
 begin
 

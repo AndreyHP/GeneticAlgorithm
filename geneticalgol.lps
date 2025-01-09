@@ -15,7 +15,10 @@
         <Filename Value="main.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Main"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
+        <TopLine Value="11"/>
+        <CursorPos X="13" Y="25"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
@@ -23,7 +26,6 @@
         <Filename Value="sceneloader.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Sceneloader"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <CursorPos X="3" Y="9"/>
         <UsageCount Value="20"/>
