@@ -22,6 +22,7 @@ var
   nextGeneration: array[1..10] of creatures;
   next:           Boolean;
   gen_text:  Integer;
+  nextgen:   Integer;
 
 procedure initMain;
 procedure updateMain;
@@ -37,11 +38,6 @@ uses
 
 const
   generation = 10;
-
-
-
-
-
 
 
 procedure initMain;
@@ -69,19 +65,49 @@ begin
 
   if IsKeyPressed(KEY_SPACE) then
   begin
-  next:=True;
-  if gen_text <= generation then
+   for i:= 1 to 10 do
+   begin
+     WriteLn(nextGeneration[i].dna);
+   end;
+  end;
+
+  if IsKeyPressed(KEY_ENTER) then
   begin
-  for i:= 1 to generation do
+  nextgen:= nextgen + 1;
+  next:=True;
+  if gen_text <= nextgen then
+  begin
+  for i:= nextgen to nextgen + 1 do
   begin
    gen_text:=  i;
    WriteLn(gen_text);
+
+   // run at the first generation
+   if not nextgen > 1 then
+   begin
    for j:= 1 to 10 do
    begin
-      //nextGeneration[j]:= creature[j];
-      if creature[j].direction = 1 then
+      if creature[j].x > 200.0 then
       begin
          nextGeneration[j]:= creature[j];
+         nextGeneration[j].x:=GetRandomValue(0,GameSCREEN_WIDTH);
+         nextGeneration[j].y:=GetRandomValue(0,GameSCREEN_HEIGHT);
+      end
+      else
+      begin
+         nextGeneration[j]:= regenerate(creature[j]);
+      end;
+   end;
+   end
+   else
+   begin
+   for j:= 1 to 10 do //run after the first generation
+   begin
+      if nextGeneration[j].x > 200.0 then
+      begin
+         nextGeneration[j]:= nextGeneration[j];
+         nextGeneration[j].x:=GetRandomValue(0,GameSCREEN_WIDTH);
+         nextGeneration[j].y:=GetRandomValue(0,GameSCREEN_HEIGHT);
       end
       else
       begin
@@ -89,18 +115,12 @@ begin
       end;
 
    end;
+   end;
+   //next:= False;
+  end;
+   WaitTime(0.2);
+  end;
 
-  end;
-   //WaitTime(0.5);
-  end;
-  end;
-
-  if IsKeyPressed(KEY_ENTER) then
-  begin
-       for i:= 1 to 10 do
-       begin
-        WriteLn(nextGeneration[i].dna);
-       end;
   end;
 
 
@@ -173,8 +193,8 @@ begin
   for i:= 1 to 10 do
    begin
 
-     rng_x:= GetRandomValue(0,SCREEN_WIDTH);
-     rng_y:= GetRandomValue(0,SCREEN_HEIGHT);
+     rng_x:= GetRandomValue(0,GameSCREEN_WIDTH);
+     rng_y:= GetRandomValue(0,GameSCREEN_HEIGHT);
 
 
      creature[i].x:=rng_x;
@@ -243,11 +263,11 @@ var
   rng_dna:   Integer;
   dna_str:   String;
 begin
-  dna_str:='';
+    dna_str:='';
+    crt.dna:='';
 
-
-     rng_x:= GetRandomValue(0,SCREEN_WIDTH);
-     rng_y:= GetRandomValue(0,SCREEN_HEIGHT);
+     rng_x:= GetRandomValue(0,GameSCREEN_WIDTH);
+     rng_y:= GetRandomValue(0,GameSCREEN_HEIGHT);
 
 
      crt.x:=rng_x;
