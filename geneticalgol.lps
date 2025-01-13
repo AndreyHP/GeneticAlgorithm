@@ -8,7 +8,7 @@
         <Filename Value="geneticalgol.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="14" Y="12"/>
-        <UsageCount Value="33"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -17,9 +17,9 @@
         <UnitName Value="Main"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="101"/>
-        <CursorPos X="60" Y="114"/>
-        <UsageCount Value="33"/>
+        <TopLine Value="72"/>
+        <CursorPos X="60" Y="88"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -29,7 +29,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="63"/>
         <CursorPos Y="74"/>
-        <UsageCount Value="33"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -37,10 +37,34 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1122"/>
         <CursorPos X="10" Y="1134"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="9"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="143" TopLine="134"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="145" TopLine="134"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="146" Column="28" TopLine="134"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="14" Column="28"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="163" Column="22" TopLine="144"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="83" Column="34" TopLine="71"/>
+      </Position>
       <Position>
         <Filename Value="main.pas"/>
         <Caret Line="15" Column="35" TopLine="13"/>
@@ -137,37 +161,13 @@
         <Filename Value="main.pas"/>
         <Caret Line="302" Column="24" TopLine="285"/>
       </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="98" Column="25" TopLine="89"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="99" Column="3" TopLine="93"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="125" TopLine="116"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="93" Column="2" TopLine="74"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="121" TopLine="107"/>
-      </Position>
-      <Position>
-        <Filename Value="main.pas"/>
-        <Caret Line="104" Column="34" TopLine="93"/>
-      </Position>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode="default">
         <Mode Name="default">
           <local>
-            <LaunchingApplication Use="True" PathPlusParams="/usr/bin/gnome-terminal -t &apos;Lazarus Run Output&apos; -e &apos;$(LazarusDir)/tools/runwait.sh $(TargetCmdLine)&apos;"/>
+            <LaunchingApplication PathPlusParams="/usr/bin/gnome-terminal -t &apos;Lazarus Run Output&apos; -e &apos;$(LazarusDir)/tools/runwait.sh $(TargetCmdLine)&apos;"/>
           </local>
         </Mode>
       </Modes>
