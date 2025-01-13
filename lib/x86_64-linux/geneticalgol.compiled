@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1625802185"/>
+  <Params Value=" -MObjFPC -Scghi -Cg -O1 -gw3 -gl -l -vewnhibq -Fi/home/andrey/Documentos/projetos/Pascal/GeneticAlgorithm/lib/x86_64-linux -Fl/home/andrey/Documentos/projetos/Pascal/GeneticAlgorithm/raylib/lib/raylib-5.5_linux_amd64 -Fu/home/andrey/Documentos/projetos/Pascal/GeneticAlgorithm/raylib -Fu/home/andrey/Documentos/projetos/Pascal/GeneticAlgorithm/ -FU/home/andrey/Documentos/projetos/Pascal/GeneticAlgorithm/lib/x86_64-linux/ -FE/home/andrey/Documentos/projetos/Pascal/GeneticAlgorithm/ -o/home/andrey/Documentos/projetos/Pascal/GeneticAlgorithm/geneticalgol geneticalgol.lpr"/>
+</CONFIG>
