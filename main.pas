@@ -18,11 +18,12 @@ type
   end;
 
 var
-  creature: array[1..10] of creatures;
-  nextGeneration: array[1..10] of creatures;
-  next:           Boolean;
-  gen_text:  Integer;
-  nextgen:   Integer;
+  creature:          array[1..10] of creatures;
+  nextGeneration:    array[1..10] of creatures;
+  next:              Boolean;
+  gen_text:          Integer;
+  nextgen:           Integer;
+  text:              string;
 
 procedure initMain;
 procedure updateMain;
@@ -43,7 +44,6 @@ const
 procedure initMain;
 begin
 
-
    next:=False;
    gen_text:=0;
 
@@ -63,7 +63,7 @@ var
 begin
 
 
-  if IsKeyPressed(KEY_SPACE) then
+  if IsKeyPressed(KEY_ENTER) then
   begin
    for i:= 1 to 10 do
    begin
@@ -71,7 +71,7 @@ begin
    end;
   end;
 
-  if IsKeyPressed(KEY_ENTER) then
+  if IsKeyPressed(KEY_SPACE) then
   begin
   nextgen:= nextgen + 1;
   next:=True;
@@ -80,8 +80,7 @@ begin
   for i:= nextgen to nextgen + 1 do
   begin
    gen_text:=  i;
-   WriteLn(gen_text);
-
+   //WriteLn(gen_text);
    // run at the first generation
    if not nextgen > 1 then
    begin
@@ -117,6 +116,7 @@ begin
    end;
    end;
    //next:= False;
+   text:= 'Gen: ' + IntToStr(gen_text);
   end;
    WaitTime(0.2);
   end;
@@ -133,6 +133,9 @@ procedure drawMain;
 var
   i: Integer;
 begin
+
+  //draw text
+  DrawText('SPACE: Next Gen',0,60,50,WHITE);
 
   if not next then
   begin
@@ -153,6 +156,7 @@ begin
   end
   else
   begin
+    DrawText(PChar(text),0,0,50,WHITE);
     for i:= 1 to 10 do
    begin
 
